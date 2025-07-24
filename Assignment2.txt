@@ -1,0 +1,547 @@
+1. Primitive Data Types Task: Create a program that accepts age, height, and weight of a person 
+and prints them with appropriate data types.  
+Sample Input: Age: 25 Height: 5.9 Weight: 68.5  
+Sample Output: Age: 25 Height: 5.9 Weight: 68.5 
+Code : 
+package Assignment2; 
+import java.util.Scanner; 
+public class task1 { 
+public static void main(String[] args) { 
+  Scanner sc = new Scanner(System.in); 
+  System.out.println("Enter Age:"); 
+  int age = sc.nextInt(); 
+  System.out.println("Enter Height:"); 
+  float Height = sc.nextFloat(); 
+  System.out.println("Enter Weight:"); 
+  double weight = sc.nextDouble(); 
+ 
+  // displaying 
+  System.out.println("\n--- Person Information ---"); 
+  System.out.println("Age :"+age); 
+  System.out.println("Height :"+Height); 
+  System.out.println("weight :"+weight); 
+  sc.close(); 
+  } 
+                              } 
+2. Variables Task: Declare and initialize different types of variables to store a student’s 
+information: ID, name, marks, and grade. Print them.  
+ Sample Input: ID: 101 Name: Arun Marks: 89.5 Grade: A  
+Sample Output: Student ID: 101 Name: Arun Marks: 89.5 Grade: A 
+Code : 
+package Assignment2; 
+import java.util.Scanner; 
+public class task2 { 
+public static void main(String[] args) { 
+  Scanner sc = new Scanner(System.in); 
+                             System.out.println("Enter Id :"); 
+  int Id = sc.nextInt(); 
+  sc.nextLine(); 
+   
+  System.out.println("Enter Name :"); 
+  String Name = sc.nextLine(); 
+   
+  System.out.println("Enter Marks :"); 
+  float Marks = sc.nextFloat(); 
+   
+  System.out.println("Enter Grade :"); 
+  char Grade = sc.next().charAt(0); 
+  // Displaying 
+  System.out.println("Student ID :"+Id); 
+  System.out.println("Name :"+Name); 
+  System.out.println("Marks :"+Marks); 
+  System.out.println("Grade :"+Grade); 
+  sc.close(); 
+  } 
+ 
+} 
+ 
+3. Operators Task: Accept two numbers and perform arithmetic, relational, and logical 
+operations on them.  
+Sample Input: Number1: 10 Number2: 20  
+Sample Output: Addition: 30 Greater number: 20 Are both positive? True 
+ 
+package Assignment2; 
+ 
+import java.util.Scanner; 
+ 
+public class task3 { 
+ 
+ public static void main(String[] args) { 
+  Scanner sc = new Scanner(System.in); 
+  // take input 
+  System.out.println("Enter Number1:"); 
+  int Number1 = sc.nextInt(); 
+  System.out.println("Enter Number2:"); 
+  int Number2 = sc.nextInt(); 
+   
+  // Arithmetic operation 
+  int sum = Number1+Number2; 
+  //Relational operation 
+  int greater = (Number1>Number2) ? Number1: Number2; 
+  //Logical operation 
+  boolean bothPositive = (Number1 >0) && (Number2>0); 
+   
+  //displaying 
+  System.out.println("Addition :" +sum); 
+  System.out.println("Greater number :" +greater); 
+  System.out.println("Are both positive ? :" +bothPositive); 
+  sc.close(); 
+   
+ 
+ } 
+ 
+} 
+ 
+4. String Concatenation Task: Create a greeting message using first name and last name entered 
+by the user.  
+Sample Input: First Name: Ravi Last Name: Kumar  
+Sample Output: Hello, Ravi Kumar! Welcome to the system. 
+package Assignment2; 
+ 
+import java.util.Scanner; 
+ 
+public class task4 { 
+ 
+ public static void main(String[] args) { 
+  Scanner sc = new Scanner(System.in); 
+   
+  //Input 
+  System.out.println("Enter First Name:"); 
+  String FirstName = sc.nextLine(); 
+  System.out.println("Enter Last Name:"); 
+  String LastName = sc.nextLine(); 
+  //displaying 
+  System.out.println("\nHello, " + FirstName + " " + LastName + "! Welcome to 
+the system."); 
+  sc.close(); 
+   
+   
+ 
+ } 
+ 
+} 
+ 
+5. StringBuilder Task: Accept a sentence and reverse it using StringBuilder.  
+Sample Input: Input: Hello Java Learners 
+ Sample Output: Original: Hello Java Learners Reversed: srenraeL avaJ olleH 
+ 
+package Assignment2; 
+import java.util.Scanner; 
+public class task5 { 
+ 
+ public static void main(String[] args) { 
+  Scanner sc = new Scanner(System.in); 
+  System.out.println("Enter a sentance :"); 
+  String input = sc.nextLine(); 
+  // Reversing 
+  StringBuilder reversed = new StringBuilder(input); 
+  reversed.reverse(); 
+   
+  System.out.println("\nOriginal :"+input); 
+  System.out.println("Reversed :"+ reversed.toString()); 
+  sc.close(); 
+   
+ 
+ } 
+ 
+} 
+ 
+6. String API Task: Count how many times a specific character appears in a string.  
+Sample Input: String: banana Character: a  
+Sample Output: Character 'a' appears 3 times. 
+package Assignment2; 
+ 
+import java.util.Scanner; 
+ 
+public class task6 { 
+ 
+ public static void main(String[] args) { 
+  Scanner s = new Scanner(System.in); 
+  System.out.println("Enter string :"); 
+  String input = s.nextLine(); 
+  System.out.println("Enter the target character :"); 
+  char targetchar = s.next().charAt(0); 
+   
+  int count = 0; 
+  for(int i=0; i<input.length(); i++) { 
+   if(input.charAt(i) == targetchar) { 
+    count++; 
+   } 
+  } 
+   
+  System.out.println("\nCharacter" + targetchar +" appears"+ count+ "times"); 
+  s.close(); 
+    
+   
+   
+ 
+ } 
+ 
+} 
+ 
+ 
+ 
+
+7. Date, Time, and Numeric Objects Task: Display the current date and format it as DD-MM
+YYYY. Also, show a formatted currency value.  
+Sample Input: Date: [current system date] Amount: 12345.678  
+Sample Output: Current Date: 20-07-2025 Formatted Amount: ₹12,345.68 
+package Assignment2; 
+ 
+import java.time.LocalDate; 
+import java.time.format.DateTimeFormatter; 
+import java.text.NumberFormat; 
+import java.util.Locale; 
+ 
+public class task7 { 
+ 
+ public static void main(String[] args) { 
+  LocalDate currentDate = LocalDate.now(); 
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy"); 
+        String formattedDate = currentDate.format(formatter); 
+ 
+        double amount = 12345.678; 
+        NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(new 
+Locale("en", "IN")); 
+        String formattedAmount = currencyFormatter.format(amount); 
+         
+        System.out.println("Current Date: " + formattedDate); 
+        System.out.println("Formatted Amount: " + formattedAmount); 
+   
+ } 
+ 
+} 
+ 
+ 
+ 
+8. Flow Control Task: Based on a number entered, print whether it's positive, negative, or zero. 
+ Sample Input: Number: -5  
+Sample Output: The number is negative. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+package Assignment2; 
+import java.util.Scanner; 
+ 
+public class task8 { 
+ 
+ public static void main(String[] args) { 
+  Scanner sc = new Scanner(System.in); 
+  System.out.println("Enter the number :"); 
+  int Number = sc.nextInt(); 
+  //condition 
+  if (Number > 0) { 
+   System.out.println("The number is positive"); 
+  } else if (Number < 0) { 
+   System.out.println("The number is Negative"); 
+  } else { 
+   System.out.println("The number is Zero"); 
+  } 
+  sc.close(); 
+   
+} 
+} 
+9. Conditions Task: Accept marks and display the grade using if-else.  
+Sample Input: Marks: 76  
+Sample Output: Grade: B 
+package Assignment2; 
+import java.util.Scanner; 
+ 
+public class task9 { 
+ 
+ public static void main(String[] args) { 
+  Scanner sc = new Scanner(System.in); 
+  // Input marks 
+  System.out.println("Enter marks :"); 
+  int marks = sc.nextInt(); 
+  char grade; 
+  //Alloting grades 
+   if (marks >= 90) { 
+             grade = 'A'; 
+         } else if (marks >= 80) { 
+             grade = 'B'; 
+         } else if (marks >= 70) { 
+             grade = 'C'; 
+         } else if (marks >= 60) { 
+             grade = 'D'; 
+         } else if (marks >= 50) { 
+Assignment Day-2                                                                                                                             JAVA 
+23.07.2025 
+             grade = 'E'; 
+         } else { 
+             grade = 'F'; 
+         } 
+          
+  // output 
+  System.out.println("Grade :" +grade); 
+  sc.close(); 
+ } 
+ 
+} 
+10. Switch Task: Build a simple calculator using switch to perform operations (+, -, *, /).  
+Sample Input: Number1: 10 Number2: 5 Operation: *  
+Sample Output: Result: 50 
+ package Assignment2; 
+ 
+import java.util.Scanner; 
+ 
+public class task10 { 
+ 
+ public static void main(String[] args) { 
+  Scanner s = new Scanner(System.in); 
+  System.out.println("Enter number1 :"); 
+  int number1 = s.nextInt(); 
+  System.out.println("Enter number2 :"); 
+  int number2 = s.nextInt(); 
+  System.out.println("Enter operator :"); 
+  char operation = s.next().charAt(0); 
+  double result; 
+  //switch 
+  switch (operation) { 
+  case '+' : 
+   result = number1+number2; 
+   System.out.println("Result: "+result); 
+   break; 
+    
+  case '-' : 
+   result = number1-number2; 
+   System.out.println("Result: "+result); 
+   break; 
+    
+  case '*' : 
+   result = number1*number2; 
+   System.out.println("Result: "+result); 
+   break; 
+    
+  case '/' : 
+   result = number1/number2; 
+   System.out.println("Result: "+result); 
+      break; 
+      
+   default: 
+    System.out.println("Invalid poperator"); 
+    s.close(); 
+  } 
+ } 
+} 
+11. Loops and Branching Task: Print the first N even numbers using a loop.  
+Sample Input: N = 5 Sample  
+Output: 0 2 4 6 8 
+package Assignment2; 
+ 
+import java.util.Scanner; 
+ 
+public class task11 { 
+ 
+ public static void main(String[] args) { 
+  Scanner sc = new Scanner(System.in); 
+  System.out.println("Enter N :"); 
+  int N = sc.nextInt(); 
+   
+  System.out.println("First"+ N + "even numbers :"); 
+  for( int i=0; i < N; i++) { 
+   System.out.println(2*i + " "); 
+  } 
+  sc.close(); 
+   
+ 
+ } 
+ 
+} 
+ 
+12. Arrays Task: Accept 5 numbers, store them in an array, and display their average.  
+Sample Input: Numbers: 10, 20, 30, 40, 50  
+Sample Output: Average: 30.0 
+ 
+ 
+ 
+ 
+ 
+package Assignment2; 
+ 
+import java.util.Scanner; 
+ 
+public class task12 { 
+ 
+ public static void main(String[] args) { 
+  Scanner sc = new Scanner(System.in); 
+    
+  int[] numbers = new int[5]; // array with storage of 5 numbers 
+  int sum = 0; 
+   
+  System.out.println("Enter 5 numbers :"); 
+  for(int i = 0; i<5; i++) 
+  { 
+   numbers[i] = sc.nextInt(); 
+   sum += numbers[i];  
+  } 
+  double avg = (double) sum/5; 
+  System.out.println("Average :" + avg); 
+  sc.close(); 
+ 
+ } 
+ 
+} 
+13. Enum Task: Create an enum for days of the week. Print a message depending on the day. 
+Sample Input: Day: MONDAY  
+Sample Output: Start of the work week! 
+package assignmentsjava2; 
+import java.util.Scanner; 
+ 
+public class task13 { 
+  
+ enum Day { 
+        MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY 
+    } 
+ 
+ 
+ public static void main(String[] args) { 
+  Scanner scanner = new Scanner(System.in); 
+ 
+        System.out.print("Enter day (e.g., MONDAY): "); 
+        String input = scanner.next().toUpperCase(); 
+ 
+        if (input.equals("MONDAY")) { 
+
+            System.out.println("Start of the work week!"); 
+        } else if (input.equals("FRIDAY")) { 
+            System.out.println("Almost weekend!"); 
+        } else if (input.equals("SATURDAY") || input.equals("SUNDAY")) { 
+            System.out.println("Enjoy your weekend!"); 
+        } else if (input.equals("TUESDAY") || input.equals("WEDNESDAY") || 
+input.equals("THURSDAY")) { 
+            System.out.println("Just another weekday."); 
+        } else { 
+            System.out.println("Invalid day."); 
+        } 
+ 
+        scanner.close(); 
+    } 
+ 
+ 
+ } 
+14. OOPs Concepts Task: Create a Student class with fields for name and marks. Create an object 
+and display its data.  
+Sample Input: Name: Riya Marks: 87  
+Sample Output: Student Name: Riya Marks: 87 
+
+package Assignment2; 
+import java.util.Scanner; 
+ 
+class Student { 
+ String name; 
+ int marks; 
+ 
+ 
+    void display() { 
+     System.out.println("Student Name :" + name); 
+     System.out.println("Marks :" + marks); 
+    } 
+} 
+public class task14 { 
+ 
+ public static void main(String[] args) { 
+  Scanner s = new Scanner(System.in); 
+   
+  Student student = new Student(); // object is created 
+   
+  System.out.println("Enter Student Name :" );// importing details 
+  student.name = s.nextLine(); 
+  System.out.println("Enter marks :" ); 
+  student.marks = s.nextInt(); 
+ 
+   
+  System.out.println(); 
+  student.display(); 
+   
+  s.close(); 
+   
+   
+ 
+ } 
+ 
+} 
+15. Inheritance Task: Create a class Employee and a subclass Manager that extends Employee 
+and adds department information.  
+Sample Input: Name: Raj Salary: 50000 Department: Sales  
+Sample Output: Name: Raj Salary: 50000 Department: Sales 
+ 
+package Assignment2; 
+ 
+public class task15_employee { 
+ String name; 
+ double salary; 
+} 
+ 
+ 
+package Assignment2; 
+import java.util.Scanner; 
+ 
+public class comapny { 
+ 
+ public static void main(String[] args) { 
+  Scanner sc = new Scanner(System.in); 
+        Manager manager = new Manager(); 
+ 
+        System.out.print("Enter Name: "); 
+        manager.name = sc.nextLine(); 
+ 
+        System.out.print("Enter Salary: "); 
+        manager.salary = sc.nextDouble(); 
+ 
+        sc.nextLine(); // consume leftover newline 
+ 
+        System.out.print("Enter Department: "); 
+        manager.department = sc.nextLine(); 
+ 
+        System.out.println(); 
+        manager.displayDetails(); 
+ 
+        sc.close(); 
+ 
+ } 
+ 
+} 
+package Assignment2; 
+ 
+public class Manager  extends task15_employee { 
+ String department; 
+  
+ void displayDetails() { 
+  System.out.println("Name : " + name); 
+  System.out.println("Salary : " + salary); 
+  System.out.println("Department : " + department); 
+ } 
+ 
+} 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+   
+   
+   
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                        
