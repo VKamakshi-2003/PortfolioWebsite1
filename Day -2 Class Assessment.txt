@@ -1,0 +1,100 @@
+Day -2 Class Assessment 
+ 
+1. Java Program: Are you above 18 years old? 
+Sample Output: 
+Please enter your age: 21 You are eligible to vote. 
+package Assignments; 
+import java.util.Scanner; 
+public class Age { 
+                          public static void main(String[] args) { 
+             Scanner s=new Scanner(System.in); 
+             System.out.println("Please enter your age :"); 
+             int age=s.nextInt(); 
+             if(age>18) { 
+         System.out.println("You are eligible to vote"); 
+           } 
+        else if(age<18) 
+         System.out.println("You are not eligible to vote ") 
+} 
+ 
+} 
+2. Java Program: Print Multiplication Table Using for Loop 
+Sample Output: 
+Enter a number to print its multiplication table: 7 Multiplication table for 7: 
+7 x 1 = 7 
+7 x 2 = 14 
+7 x 3 = 21 
+7 x 4 = 28 
+7 x 5 = 35 
+7 x 6 = 42 
+7 x 7 = 49 
+7 x 8 = 56 
+7 x 9 = 63 
+7 x 10 = 70 
+ 
+Day -2 Class Assessment 
+ 
+package Assignments; 
+import java.util.Scanner; 
+public class multiplication { 
+                            public static void main(String[] args) { 
+  // TODO Auto-generated method stub 
+   Scanner s = new Scanner(System.in); 
+ 
+              // Ask the user to enter a number 
+              System.out.print("Enter a number to print its multiplication table: "); 
+              int number = s.nextInt(); 
+ 
+         // Print the multiplication table from 1 to 10 
+         System.out.println("Multiplication Table for " + number + ":"); 
+         for (int i = 1; i <= 10; i++) { 
+             System.out.println(number + " x " + i + " = " + (number * i)); 
+         } 
+s.close(); 
+     } 
+ } 
+ 
+3. Java Program: Character, String, and Boolean Input Example 
+Sample Output: 
+Enter a single character: A Enter your name: Alice 
+Do you like programming? (true/false): true --- User Input Summary --- Character entered: A 
+Name entered: Alice Likes programming: true 
+Great! Keep coding, Alice! 
+ 
+ 
+ 
+ 
+ 
+Day -2 Class Assessment 
+ 
+package Assignments; 
+import java.util.Scanner; 
+public class checking { 
+             public static void main(String[] args) { 
+ // TODO Auto-generated method stub 
+ Scanner s = new Scanner(System.in); 
+               System.out.print("Enter a single character: "); 
+                char character = s.next().charAt(0); 
+                s.nextLine();  
+                System.out.print("Enter your name: "); 
+                String name = s.nextLine(); 
+ 
+        
+        System.out.print("Do you like programming? (true/false): "); 
+        boolean likesProgramming = s.nextBoolean(); 
+ 
+        // Output: Summary 
+        System.out.println("\nUser Input Summary\n"); 
+        System.out.println("Character entered: " + character); 
+        System.out.println("Name entered: " + name); 
+        System.out.println("Likes programming: " + likesProgramming); 
+ 
+        if (likesProgramming) { 
+            System.out.println("\nGreat! Keep coding, " + name + "!"); 
+        } else { 
+            System.out.println("\nNo worries, " + name + "! Maybe you'll like it someday."); 
+        } 
+ 
+        s.close(); 
+    } 
+} 
